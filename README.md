@@ -1,4 +1,4 @@
-# Clear-understanding-of-how-to-retrieve-data
+# SQL Intern DAY 3 Task
 SQL script with SELECT, WHERE, ORDER BY, LIMIT
 --------------------------------------------------
 SELECT Name, Salary → Choose only the Name and Salary columns.
