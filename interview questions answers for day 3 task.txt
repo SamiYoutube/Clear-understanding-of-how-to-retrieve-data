@@ -1,0 +1,76 @@
+1. What does SELECT * do?
+SELECT * retrieves all columns from the specified table. For example:
+
+SELECT * FROM employees;
+
+returns every column for all rows in the employees table.
+
+2. How do you filter rows?
+You use the WHERE clause to filter rows based on conditions.
+Example:
+
+SELECT name, salary 
+FROM employees 
+WHERE salary > 50000;
+
+This returns only employees with a salary greater than 50,000.
+
+3. What is LIKE '%value%'?
+LIKE is used for pattern matching in strings. %value% finds any row containing "value" anywhere in the column.
+Example:
+
+SELECT * FROM employees WHERE name LIKE '%John%';
+
+matches names like "John", "Johnny", or "Long John".
+
+4. What is BETWEEN used for?
+BETWEEN checks if a value lies within a range, inclusive of the boundaries.
+Example:
+
+SELECT * FROM employees WHERE salary BETWEEN 40000 AND 60000;
+
+returns salaries from 40,000 to 60,000.
+
+5. How do you limit output rows?
+You use the LIMIT clause to restrict the number of rows returned.
+Example:
+
+SELECT * FROM employees LIMIT 5;
+
+returns only the first 5 rows.
+
+6. Difference between = and IN 
+= checks one value:
+
+WHERE department = 'HR';
+
+IN checks multiple values:
+
+WHERE department IN ('HR', 'Finance', 'IT');
+
+7. How to sort in descending order?
+Use ORDER BY with DESC.
+Example:
+
+SELECT * FROM employees ORDER BY salary DESC;
+
+sorts salaries from highest to lowest.
+
+8. What is aliasing?
+Aliasing gives a temporary name to a column or table using AS.
+Example:
+
+SELECT name AS EmployeeName, salary AS SalaryAmount FROM employees;
+
+makes the output more readable.
+
+9. Explain DISTINCT.
+DISTINCT removes duplicate values in the result.
+Example:
+
+SELECT DISTINCT department FROM employees;
+
+returns each department only once.
+
+10. What is the default sort order?
+The default sort order in SQL is ascending (ASC) when using ORDER BY.
